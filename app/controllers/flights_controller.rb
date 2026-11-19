@@ -4,26 +4,29 @@ class FlightsController < ApplicationController
   def index
 
     @flights = [
+
       {
-        name: "AeroINDIA OverSEAS",
+        name: "AeroLux International",
         category: "International",
-        aircraft: "High Magma  G650",
+        aircraft: "Gulfstream G650",
         departure: "Mumbai, India",
-        destination: "Eddinburgh, Scotland",
+        destination: "Dubai, UAE",
         capacity: 14,
-        available_seats: 12,
-        description: "Experience OverSEAS Travel With Explicit Luxury With Comfort And Privacy."
+        available_seats: 14,
+        description: "Experience international travel with exceptional comfort and privacy."
       },
+
       {
-        name: "AeroINDIA Domestic",
+        name: "AeroLux Domestic",
         category: "Domestic",
-        aircraft: " Challenger 650",
+        aircraft: "Bombardier Challenger 350",
         departure: "Mumbai, India",
         destination: "Delhi, India",
         capacity: 10,
         available_seats: 10,
-        description: "Discover Luxury  on your domestic journey."
+        description: "Discover effortless luxury on your domestic journey."
       }
+
     ]
 
   end

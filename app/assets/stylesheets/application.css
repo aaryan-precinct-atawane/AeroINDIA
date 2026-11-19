@@ -120,7 +120,7 @@
 /* MOBILE RESPONSIVENESS */
 
 @media (max-width: 600px) {
-  .landing-footer {
+	  .landing-footer {
     flex-direction: column;
     gap: 12px;
     text-align: center;
@@ -128,5 +128,207 @@
 
   .landing-header {
     text-align: center;
+  }
+}
+
+
+/* ==========================
+   FLIGHTS PAGE
+========================== */
+
+.flights-page {
+  min-height: 100vh;
+  background: #f8f8f6;
+  color: #171717;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+
+.flights-header {
+  padding: 30px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.brand-logo {
+  font-size: 23px;
+  letter-spacing: 6px;
+  text-decoration: none;
+  color: #111;
+}
+
+.flights-header span {
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+/* INTRODUCTION */
+
+.flights-intro {
+  text-align: center;
+  padding: 90px 20px 60px;
+}
+
+.flights-intro > p {
+  font-size: 10px;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+
+.flights-intro h1 {
+  font-size: clamp(38px, 6vw, 65px);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.flights-intro > span {
+  display: block;
+  color: #777;
+  margin-top: 20px;
+}
+
+/* AIRCRAFT LISTINGS */
+
+.flights-list {
+  max-width: 1150px;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.flight-card {
+  background: white;
+  border: 1px solid #e8e8e8;
+  transition: 0.3s ease;
+}
+
+.flight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+}
+
+/* AIRCRAFT IMAGE */
+
+.flight-image {
+  height: 260px;
+  background: linear-gradient(135deg, #30343a, #92969a);
+  position: relative;
+}
+
+.flight-category {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  background: white;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+/* AIRCRAFT INFORMATION */
+
+.flight-information {
+  padding: 30px;
+}
+
+.flight-information h2 {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.aircraft-model {
+  color: #888;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+/* FLIGHT ROUTE */
+
+.flight-route {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+  gap: 10px;
+}
+
+.flight-route small {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #888;
+}
+
+.flight-route p {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.route-arrow {
+  color: #999;
+}
+
+/* DESCRIPTION */
+
+.flight-description {
+  color: #777;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* SEAT INFORMATION */
+
+.flight-seats {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+  margin: 25px 0;
+  font-size: 11px;
+}
+
+/* BUTTON */
+
+.flight-button {
+  width: 100%;
+  padding: 16px;
+  background: #171717;
+  color: white;
+  border: 1px solid #171717;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 10px;
+  transition: 0.3s ease;
+}
+
+.flight-button:hover {
+  background: white;
+  color: #171717;
+}
+
+/* FOOTER */
+
+.flights-footer {
+  text-align: center;
+  padding: 50px 20px;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #888;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 750px) {
+  .flights-list {
+    grid-template-columns: 1fr;
+  }
+
+  .flights-header span {
+    font-size: 8px;
   }
 }
