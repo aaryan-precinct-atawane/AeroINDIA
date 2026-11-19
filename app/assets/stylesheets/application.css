@@ -1,0 +1,132 @@
+
+/* GENERAL RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* LANDING PAGE */
+
+.landing-page {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  color: white;
+
+  background-image:
+    url("https://images.unsplash.com/photo-1540962351504-03099e0a754b");
+
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+}
+
+/* DARK OVERLAY */
+
+.landing-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.65)
+  );
+}
+
+/* HEADER */
+
+.landing-header,
+.landing-content,
+.landing-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.landing-header {
+  padding: 35px 7%;
+}
+
+.landing-header h2 {
+  font-size: 25px;
+  letter-spacing: 7px;
+}
+
+.landing-header p {
+  font-size: 9px;
+  letter-spacing: 4px;
+  margin-top: 8px;
+}
+
+/* MAIN CONTENT */
+
+.landing-content {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+}
+
+.landing-content h1 {
+  font-size: clamp(48px, 8vw, 95px);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}
+
+.landing-description {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #e0e0e0;
+  margin: 25px auto 35px;
+}
+
+/* ENTER BUTTON */
+
+.enter-button {
+  display: inline-block;
+  padding: 17px 42px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 3px;
+  transition: 0.3s ease;
+}
+
+.enter-button:hover {
+  background: white;
+  color: black;
+}
+
+/* FOOTER */
+
+.landing-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 7%;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #ddd;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+  .landing-footer {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .landing-header {
+    text-align: center;
+  }
+}
