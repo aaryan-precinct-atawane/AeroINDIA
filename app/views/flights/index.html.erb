@@ -23,11 +23,18 @@
 
       <div class="flight-card">
 
-        <div class="flight-image">
-          <span class="flight-category">
-            <%= flight[:category] %>
-          </span>
-        </div>
+
+<div class="flight-image">
+
+  <%= image_tag flight[:image_url],
+      alt: flight[:aircraft],
+      class: "aircraft-photo" %>
+
+  <span class="flight-category">
+    <%= flight[:category] %>
+  </span>
+
+</div>
 
         <div class="flight-information">
 

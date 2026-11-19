@@ -1,5 +1,7 @@
 
-/* GENERAL RESET */
+/* ==========================
+   GENERAL RESET
+========================== */
 
 * {
   margin: 0;
@@ -7,7 +9,9 @@
   box-sizing: border-box;
 }
 
-/* LANDING PAGE */
+/* ==========================
+   LANDING PAGE
+========================== */
 
 .landing-page {
   min-height: 100vh;
@@ -17,16 +21,12 @@
   justify-content: space-between;
   overflow: hidden;
   color: white;
+  font-family: Arial, sans-serif;
 
-  background-image:
-    url("https://images.unsplash.com/photo-1540962351504-03099e0a754b");
-
+  background-image: url("https://images.unsplash.com/photo-1540962351504-03099e0a754b");
   background-size: cover;
   background-position: center;
-  font-family: Arial, sans-serif;
 }
-
-/* DARK OVERLAY */
 
 .landing-overlay {
   position: absolute;
@@ -37,7 +37,7 @@
   );
 }
 
-/* HEADER */
+/* LANDING HEADER, CONTENT AND FOOTER */
 
 .landing-header,
 .landing-content,
@@ -60,8 +60,6 @@
   letter-spacing: 4px;
   margin-top: 8px;
 }
-
-/* MAIN CONTENT */
 
 .landing-content {
   text-align: center;
@@ -106,7 +104,7 @@
   color: black;
 }
 
-/* FOOTER */
+/* LANDING FOOTER */
 
 .landing-footer {
   display: flex;
@@ -116,21 +114,6 @@
   letter-spacing: 2px;
   color: #ddd;
 }
-
-/* MOBILE RESPONSIVENESS */
-
-@media (max-width: 600px) {
-	  .landing-footer {
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
-  }
-
-  .landing-header {
-    text-align: center;
-  }
-}
-
 
 /* ==========================
    FLIGHTS PAGE
@@ -143,7 +126,7 @@
   font-family: Arial, sans-serif;
 }
 
-/* HEADER */
+/* FLIGHTS HEADER */
 
 .flights-header {
   padding: 30px 7%;
@@ -165,7 +148,7 @@
   letter-spacing: 3px;
 }
 
-/* INTRODUCTION */
+/* FLIGHTS INTRODUCTION */
 
 .flights-intro {
   text-align: center;
@@ -209,25 +192,37 @@
 
 .flight-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
 }
 
-/* AIRCRAFT IMAGE */
+/* AIRCRAFT IMAGES */
 
 .flight-image {
-  height: 260px;
-  background: linear-gradient(135deg, #30343a, #92969a);
+  height: 280px;
   position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #30343a, #92969a);
+}
+
+.aircraft-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .flight-category {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  padding: 10px 15px;
-  background: white;
+  top: 18px;
+  left: 18px;
+  padding: 9px 18px;
+  background: #c9a45c;
+  color: #111;
   font-size: 10px;
+  font-weight: bold;
   letter-spacing: 2px;
+  border-radius: 30px;
+  z-index: 1;
 }
 
 /* AIRCRAFT INFORMATION */
@@ -292,7 +287,7 @@
   font-size: 11px;
 }
 
-/* BUTTON */
+/* AIRCRAFT BUTTON */
 
 .flight-button {
   width: 100%;
@@ -311,7 +306,7 @@
   color: #171717;
 }
 
-/* FOOTER */
+/* FLIGHTS FOOTER */
 
 .flights-footer {
   text-align: center;
@@ -321,7 +316,9 @@
   color: #888;
 }
 
-/* MOBILE RESPONSIVENESS */
+/* ==========================
+   MOBILE RESPONSIVENESS
+========================== */
 
 @media (max-width: 750px) {
   .flights-list {
@@ -330,5 +327,17 @@
 
   .flights-header span {
     font-size: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .landing-footer {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .landing-header {
+    text-align: center;
   }
 }
