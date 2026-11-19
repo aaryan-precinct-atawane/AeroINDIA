@@ -1,0 +1,35 @@
+<div class="feedback-page">
+
+  <h1>Customer Experiences</h1>
+
+  <p>Discover what our customers say about AeroLux.</p>
+
+  <%= link_to "WRITE A REVIEW", new_feedback_path, class: "feedback-button" %>
+
+  <div class="reviews-list">
+
+    <% @feedbacks.each do |feedback| %>
+
+      <div class="review-card">
+
+        <h3><%= feedback.name %></h3>
+
+        <p class="review-rating">
+          <%= "★" * feedback.rating %>
+          <%= "☆" * (5 - feedback.rating) %>
+        </p>
+
+        <p><%= feedback.review %></p>
+
+      </div>
+
+    <% end %>
+
+    <% if @feedbacks.empty? %>
+      <p>No approved reviews yet. Be the first to share your experience!</p>
+    <% end %>
+
+  </div>
+
+</div>
+

@@ -1,0 +1,33 @@
+<div class="feedback-page">
+
+  <h1>Share Your Experience</h1>
+
+  <p>We would love to hear about your AeroLux experience.</p>
+
+  <%= form_with model: @feedback do |form| %>
+
+    <div>
+      <%= form.label :name, "Your Name" %>
+      <%= form.text_field :name, required: true %>
+    </div>
+
+    <div>
+      <%= form.label :email, "Email Address" %>
+      <%= form.email_field :email, required: true %>
+    </div>
+
+    <div>
+      <%= form.label :rating, "Your Rating" %>
+      <%= form.select :rating, (1..5).map { |n| ["#{n} Stars", n] }, prompt: "Select Rating", required: true %>
+    </div>
+
+    <div>
+      <%= form.label :review, "Your Review" %>
+      <%= form.text_area :review, rows: 5, required: true %>
+    </div>
+
+    <%= form.submit "SUBMIT FEEDBACK" %>
+
+  <% end %>
+
+</div>
